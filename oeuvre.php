@@ -1,6 +1,6 @@
 <?php
-    require 'header.php';
-    require 'oeuvres.php';
+    require 'elements/header.php';
+    require 'data/oeuvres.php';
 
     // Si l'URL ne contient pas d'id, on redirige sur la page d'accueil
     if(empty($_GET['id'])) {
@@ -37,4 +37,4 @@
     </div>
 </article>
 
-<?php require 'footer.php'; ?>
+<?php require 'elements/footer.php'; ?>
