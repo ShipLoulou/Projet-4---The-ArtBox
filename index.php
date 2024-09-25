@@ -1,6 +1,11 @@
 <?php
-    require 'header.php';
-    require 'oeuvres.php';
+    require 'elements/header.php';
+    require 'data/bdd.php';
+
+    $requete = connexion();
+    $response = $requete->query('SELECT * FROM oeuvres');
+    $oeuvres = $response->fetchAll();
+
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
@@ -13,4 +18,4 @@
         </article>
     <?php endforeach; ?>
 </div>
-<?php require 'footer.php'; ?>
+<?php require 'elements/footer.php'; ?>
